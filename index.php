@@ -29,5 +29,8 @@ require_once __DIR__ . '/src/utils/View.php';
 // Routes
 require_once __DIR__ . '/src/routes/web.php';
 
+// Mulai session untuk menyimpan data
+session_start();
+
 // Jalankan router
 Route::dispatch($_SERVER['REQUEST_URI']);

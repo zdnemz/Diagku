@@ -2,7 +2,7 @@
 return [
     'db' => [
         'host' => 'localhost',
-        'name' => 'proyek_akhir',
+        'name' => 'tugas_akhir',
         'user' => 'root',
         'pass' => '',
     ]
