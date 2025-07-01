@@ -22,4 +22,12 @@ class HasilDiagnosaModel extends Model
 
     }
 
+    public function deleteHasilDiagnosaByUserId($kode_pengguna)
+    {
+        $query = "DELETE FROM hasil_diagnosa WHERE kode_pengguna = :kode_pengguna";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(':kode_pengguna', $kode_pengguna, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
 }

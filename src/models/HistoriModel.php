@@ -35,4 +35,13 @@ class HistoriModel extends Model
         $sql .= implode(", ", $placeholders);
         return $this->execute($sql, $params);
     }
+
+    public function deleteHistoriByUserId($kode_pengguna) {
+        $sql = "DELETE FROM histori 
+            WHERE kode_diagnosa IN (
+                SELECT kode_diagnosa FROM hasil_diagnosa WHERE kode_pengguna = ?
+            )";
+        return $this->execute($sql, [$kode_pengguna]);
+        
+    }
 }

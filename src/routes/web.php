@@ -15,6 +15,9 @@ Route::post('/diagnosa', [DiagnosaController::class, 'proses']);
 // hasil diagnosa
 Route::get('/diagnosa/hasil', [\DiagnosaController::class, 'hasil']);
 
+// riwayat diagnosa
+Route::post('/riwayat/hapus', [\RiwayatController::class, 'hapus']);
+
 // halaman login
 Route::get('/login', [\AuthController::class, 'login']);
 Route::post('/login', [\AuthController::class, 'proses_login']);
